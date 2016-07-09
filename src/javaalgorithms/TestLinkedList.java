@@ -5,10 +5,12 @@ public class TestLinkedList {
 	public static void main(String[] args) {
 		LinkedList<Integer> linkedList = new LinkedList<Integer>();
 		linkedList.add(1);
-		linkedList.add(2);
-		linkedList.add(3);
-		
 		System.out.println("Size::" + linkedList.getCount());
+		linkedList.add(2);
+		System.out.println("Size::" + linkedList.getCount());
+		linkedList.add(3);		
+		System.out.println("Size::" + linkedList.getCount());
+		
 		linkedList.printList();
 		
 		linkedList.remove(1);
@@ -28,7 +30,22 @@ public class TestLinkedList {
 		
 		System.out.println("Size::" + linkedList.getCount());
 		
-		//linkedList.remove(5);
+		//Test removing node from middle
+		
+		linkedList.add(9);
+		linkedList.add(19);
+		linkedList.add(29);
+		
+		System.out.println("Size::" + linkedList.getCount());
+		
+		linkedList.printList();
+		
+		//Remove the 2nd element from the list
+		linkedList.remove(1);
+		
+		//Check the remaining elements
+		linkedList.printList();
+		
 
 	}
 
