@@ -31,9 +31,11 @@ public class LinkedList<T> {
 			throw new IllegalArgumentException();
 		}
 		
+		//First node
 		if(index == 0){
 			head = null;
-		}else if(index == count-1){
+		}//Last node being removed
+		else if(index == count-1){
 			Node<T> currentNode = head;
 			for(int i=0; i< index-1; i++){
 				currentNode = currentNode.getNext();
@@ -41,7 +43,8 @@ public class LinkedList<T> {
 			currentNode.setNext(null);
 		}else{
 			Node<T> currentNode = head;
-			for(int i=0; i< index; i++){
+			//Iterate to the node which is to be removed
+			for(int i=0; i< index-1; i++){
 				currentNode = currentNode.getNext();
 			}
 			currentNode.setNext(currentNode.getNext().getNext());
