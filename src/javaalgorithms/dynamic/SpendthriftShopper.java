@@ -34,6 +34,7 @@ Explanation
 select 4 and 10
  */
 public class SpendthriftShopper {
+	
 
 	public static void main(String[] args) throws Exception{
 		
